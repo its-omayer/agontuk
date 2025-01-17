@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-noto-sans: var(--font-noto-sans);
+  --font-atma: var(--font-atma);
+  --font-galada: var(--font-galada);
+  --font-hind-siliguri: var(--font-hind-siliguri);
+  
+  /* Custom color scheme */
+  --primary: 147 51 234;
+  --primary-foreground: 255 255 255;
+  --secondary: 79 70 229;
+  --secondary-foreground: 255 255 255;
+  --accent: 224 242 254;
+  --accent-foreground: 17 24 39;
+}
+
+@layer base {
+  body {
+    @apply text-gray-900 dark:text-gray-50;
+    font-family: var(--font-noto-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    font-family: 'Lora', var(--font-noto-sans), serif;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+}
+
+/* Font classes */
+.font-noto-sans {
+  font-family: var(--font-noto-sans);
+}
+
+.font-atma {
+  font-family: var(--font-atma);
+}
+
+.font-galada {
+  font-family: var(--font-galada);
+}
+
+.font-hind-siliguri {
+  font-family: var(--font-hind-siliguri);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Responsive spacing utilities */
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+.section-spacing {
+  @apply py-8 md:py-12 lg:py-16;
+}
+
+/* Card hover effects */
+.hover-card {
+  @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+
+.font-fancy {
+  font-family: 'Lora', var(--font-noto-sans), serif;
+}
